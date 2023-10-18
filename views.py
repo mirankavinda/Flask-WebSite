@@ -7,7 +7,7 @@ def home():
     return render_template("index.html")
 
 @views.route("/profile")
-def profile(username):
+def profile():
     args = request.args
     name = args.get('name')
-    return render_template("index.html", name=username)
+    return render_template("index.html", name=name)
